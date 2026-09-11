@@ -1,6 +1,6 @@
 # Fake-News-Prediction-Model
 An end-to-end NLP and machine learning pipeline built in Google Colab to classify real vs. fake news articles using Logistic Regression and Decision Trees. Adapted from a GeeksforGeeks tutorial with custom debugging optimization for data shuffling, text preprocessing, and matrix evaluations.
-# 📰 Fake News Prediction Model
+#  Fake News Prediction Model
 
 [![Python](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/)
 [![Colab](https://img.shields.io/badge/Made%20in-Google%20Colab-F9AB00.svg)](https://colab.research.google.com/)
@@ -11,7 +11,7 @@ A Python-based NLP and machine learning pipeline that classifies news articles a
 
 ---
 
-## 📖 Table of Contents
+##  Table of Contents
 - [Overview](#-project-overview)
 - [Core Features](#core-features)
 - [Tech Stack](#-tech-stack)
@@ -24,7 +24,7 @@ A Python-based NLP and machine learning pipeline that classifies news articles a
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 The goal of this project is a robust binary text classification engine. Using text normalization and classical ML algorithms, the pipeline learns the language patterns inherent to deceptive news reporting to systematically flag misinformation.
 
 ### Core Features
@@ -35,7 +35,7 @@ The goal of this project is a robust binary text classification engine. Using te
 
 ---
 
-## 🛠 Tech Stack
+##  Tech Stack
 | Category | Tools |
 |---|---|
 | Language | Python 3 |
@@ -47,7 +47,7 @@ The goal of this project is a robust binary text classification engine. Using te
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 1. Open the notebook in Google Colab (click the badge above or upload the `.ipynb` directly).
 2. Run the cells in order — dependencies install automatically at the top of the notebook.
@@ -57,14 +57,14 @@ The goal of this project is a robust binary text classification engine. Using te
 
 ---
 
-## 🔬 Data Processing & Engineering
+##  Data Processing & Engineering
 1. **Shuffling & Reset** — Dataset rows are fully randomized with `.sample(frac=1)` to mix labels, paired with clean index restructuring to protect pipeline memory tracking.
 2. **Text Optimization** — Custom regular expressions strip structural formatting and punctuation. Tokens are lowercased and filtered against standard `NLTK` English stop words.
 3. **Matrix Generation** — Words are converted into numerical vectors using TF-IDF weights, capturing contextual relevance rather than raw frequency counts.
 
 ---
 
-## 🔧 Real-World Debugging & Adaptation
+## Real-World Debugging & Adaptation
 Several logical and structural bugs were resolved during development to ensure pipeline integrity:
 
 - **Pandas DataFrame Indexing** — Fixed a structural crash where dropping the native index threw a `KeyError`, resolved with a safer chained approach: `.reset_index(drop=True)`.
@@ -73,19 +73,19 @@ Several logical and structural bugs were resolved during development to ensure p
 
 ---
 
-## 📊 Evaluation & Diagnostics
+##  Evaluation & Diagnostics
 - **Logistic Regression** — Stable learning behavior, producing a reliable and highly generalizable accuracy baseline on unseen data.
 - **Decision Tree Classifier** — Achieved a perfect training fit but showed classic **overfitting** under unconstrained tree depth. Variance is visualized in an integrated Seaborn confusion matrix with percentage distributions.
 
 ---
 
-## 📜 Acknowledgments & Attributions
+##  Acknowledgments & Attributions
 - **Learning Source** — Implementation inspired by and adapted from structural concepts in a project tutorial by **GeeksforGeeks**... https://www.geeksforgeeks.org/machine-learning/fake-news-detection-using-machine-learning/
 - **Modifications** — Base concepts were extended to fix operational pipeline bugs, update legacy syntax, and add custom diagnostic plots.
 
 ---
 
-## ⚖️ License
+##  License
 This project is licensed under the **MIT License**.
 
 ```text
